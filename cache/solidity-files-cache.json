@@ -191,8 +191,8 @@
       ]
     },
     "C:\\Users\\HP\\Desktop\\Henoc.k\\dev_blockchain\\contracts\\StakingReward.sol": {
-      "lastModificationDate": 1761741221992,
-      "contentHash": "9759cd450c6d3f6aabe54f29c3f50d38",
+      "lastModificationDate": 1767049320574,
+      "contentHash": "7f17e1205122ed2e93788bc6e749fc0c",
       "sourceName": "contracts/StakingReward.sol",
       "solcConfig": {
         "version": "0.8.20",

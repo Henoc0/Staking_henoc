@@ -53,7 +53,6 @@ contract StakingReward is IStakingReward{
         reward[msg.sender] = earned(user);
         rewardPerTokenPaid[user] = rewardPerTokenStored;
         _;
-
     }
 
 
@@ -81,15 +80,12 @@ contract StakingReward is IStakingReward{
     //Calcule le moment ou les récompenses doivent etre calculé
     function LastTimeReward() public view returns(uint256){
         uint256 finish = periodFinish;
-        return block.timestamp > finish ? block.timestamp : finish;
+        return block.timestamp < finish ? block.timestamp : finish;
     }
 
     //Calcul les récompenses gagnés par un utilisateur 
     function earned(address _user) public view returns(uint256){
         return (balance[_user] * RewardPerToken() - rewardPerTokenPaid[_user])/1e18 + reward[_user];
     }
-
-
-
 }
 //npx hardhat compile pour compiler
